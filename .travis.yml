@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+    - stable
+
+env:
+    global:
+    - COMMIT_AUTHOR_EMAIL: "mcfirmin@gmail.com"
+
+install:
+    - npm install
+
+script:
+    - make build
+    - bash ./deploy.sh
